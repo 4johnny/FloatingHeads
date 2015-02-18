@@ -14,6 +14,8 @@
 		B2B89EFF1A954D5400BA243F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B89EFE1A954D5400BA243F /* Images.xcassets */; };
 		B2B89F021A954D5400BA243F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2B89F001A954D5400BA243F /* LaunchScreen.xib */; };
 		B2B89F0E1A954D5400BA243F /* FloatingHeadsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B89F0D1A954D5400BA243F /* FloatingHeadsTests.m */; };
+		B2B89F191A954EFD00BA243F /* Floating-Heads.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B89F171A954EFD00BA243F /* Floating-Heads.xcassets */; };
+		B2B89F1A1A954EFD00BA243F /* Zooming-Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B89F181A954EFD00BA243F /* Zooming-Icons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		B2B89F071A954D5400BA243F /* FloatingHeadsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloatingHeadsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B89F0C1A954D5400BA243F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2B89F0D1A954D5400BA243F /* FloatingHeadsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingHeadsTests.m; sourceTree = "<group>"; };
+		B2B89F171A954EFD00BA243F /* Floating-Heads.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Floating-Heads.xcassets"; sourceTree = "<group>"; };
+		B2B89F181A954EFD00BA243F /* Zooming-Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Zooming-Icons.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,8 @@
 				B2B89EF91A954D5400BA243F /* ViewController.m */,
 				B2B89EFB1A954D5400BA243F /* Main.storyboard */,
 				B2B89EFE1A954D5400BA243F /* Images.xcassets */,
-				B2B89F001A954D5400BA243F /* LaunchScreen.xib */,
+				B2B89F171A954EFD00BA243F /* Floating-Heads.xcassets */,
+				B2B89F181A954EFD00BA243F /* Zooming-Icons.xcassets */,
 				B2B89EF11A954D5400BA243F /* Supporting Files */,
 			);
 			path = FloatingHeads;
@@ -96,6 +101,7 @@
 		B2B89EF11A954D5400BA243F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2B89F001A954D5400BA243F /* LaunchScreen.xib */,
 				B2B89EF21A954D5400BA243F /* Info.plist */,
 				B2B89EF31A954D5400BA243F /* main.m */,
 			);
@@ -200,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2B89EFD1A954D5400BA243F /* Main.storyboard in Resources */,
+				B2B89F1A1A954EFD00BA243F /* Zooming-Icons.xcassets in Resources */,
+				B2B89F191A954EFD00BA243F /* Floating-Heads.xcassets in Resources */,
 				B2B89F021A954D5400BA243F /* LaunchScreen.xib in Resources */,
 				B2B89EFF1A954D5400BA243F /* Images.xcassets in Resources */,
 			);
@@ -414,6 +422,7 @@
 				B2B89F131A954D5400BA243F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2B89F141A954D5400BA243F /* Build configuration list for PBXNativeTarget "FloatingHeadsTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +431,7 @@
 				B2B89F161A954D5400BA243F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
