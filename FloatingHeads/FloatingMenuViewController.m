@@ -55,6 +55,12 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+
+	[self configureButtons];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -74,6 +80,12 @@
 - (IBAction)closePressed:(FloatingButton *)sender {
 	
 	
+}
+
+
+- (void)configureButtons {
+
+	self.closeButton.center = [self.delegate getCancelButtonCenter];
 }
 
 

@@ -10,7 +10,16 @@
 #import "FloatingButton.h"
 
 
+@protocol FloatingMenuViewControllerDelegate <NSObject>
+
+- (CGPoint)getCancelButtonCenter;
+
+@end
+
+
 @interface FloatingMenuViewController : UIViewController
+
+@property (nonatomic) id <FloatingMenuViewControllerDelegate> delegate;
 
 @property (nonatomic) UIView* fromView;
 @property (nonatomic) UIVisualEffectView* blurredView;

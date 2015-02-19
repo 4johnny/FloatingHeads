@@ -33,8 +33,14 @@
 - (IBAction)addPressed:(FloatingButton *)sender {
 
 	FloatingMenuViewController* floatingMenuViewController = [[FloatingMenuViewController alloc] initWithView:self.view];
-	
+	floatingMenuViewController.delegate = self;
 	[self presentViewController:floatingMenuViewController animated:YES completion:nil];
+}
+
+
+- (CGPoint)getCancelButtonCenter {
+
+	return self.addButton.center;
 }
 
 
