@@ -92,15 +92,17 @@
 	
 	NSMutableArray* floatingButtons = [NSMutableArray array];
 	
-	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, diameter, diameter) andUIImage:[UIImage imageNamed:@"icon-add"] andBackgroundColor:[UIColor flatBlueColor]]];
+	CGRect buttonFrame = CGRectMake(0, 0, diameter, diameter);
 	
-	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, diameter, diameter) andUIImage:[UIImage imageNamed:@"model-008"] andBackgroundColor:[UIColor flatWhiteColor]]];
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:buttonFrame andUIImage:[UIImage imageNamed:@"icon-add"] andBackgroundColor:[UIColor flatBlueColor]]];
 	
-	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, diameter, diameter) andUIImage:[UIImage imageNamed:@"model-007"] andBackgroundColor:[UIColor flatWhiteColor]]];
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:buttonFrame andUIImage:[UIImage imageNamed:@"model-008"] andBackgroundColor:[UIColor flatWhiteColor]]];
 	
-	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, diameter, diameter) andUIImage:[UIImage imageNamed:@"model-004"] andBackgroundColor:[UIColor flatWhiteColor]]];
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:buttonFrame andUIImage:[UIImage imageNamed:@"model-007"] andBackgroundColor:[UIColor flatWhiteColor]]];
 	
-	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, diameter, diameter) andUIImage:[UIImage imageNamed:@"model-005"] andBackgroundColor:[UIColor flatWhiteColor]]];\
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:buttonFrame andUIImage:[UIImage imageNamed:@"model-004"] andBackgroundColor:[UIColor flatWhiteColor]]];
+	
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:buttonFrame andUIImage:[UIImage imageNamed:@"model-005"] andBackgroundColor:[UIColor flatWhiteColor]]];
 	
 	return floatingButtons;
 }
