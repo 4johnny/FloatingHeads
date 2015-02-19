@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inbox" translatesAutoresizingMaskIntoConstraints="NO" id="PJG-K8-xst">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOG-3t-twC" customClass="FloatingButton">
+                                <rect key="frame" x="534" y="530" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="MB8-Sm-PAP"/>
+                                    <constraint firstAttribute="height" constant="50" id="NTz-VG-xN9"/>
+                                </constraints>
+                                <state key="normal" image="icon-add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PJG-K8-xst" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CM2-Cd-Y4I"/>
+                            <constraint firstAttribute="trailing" secondItem="PJG-K8-xst" secondAttribute="trailing" id="Cs7-V1-8Gd"/>
+                            <constraint firstAttribute="centerY" secondItem="PJG-K8-xst" secondAttribute="centerY" id="HBM-gm-aQF"/>
+                            <constraint firstAttribute="centerX" secondItem="PJG-K8-xst" secondAttribute="centerX" id="LUb-bT-MS7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PJG-K8-xst" secondAttribute="bottom" id="NvT-xU-GCm"/>
+                            <constraint firstItem="yOG-3t-twC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hxL-Ey-pDx"/>
+                            <constraint firstItem="PJG-K8-xst" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o5b-IA-JcN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yOG-3t-twC" secondAttribute="bottom" constant="20" id="tYI-1v-amX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-add" width="25" height="24"/>
+        <image name="inbox" width="375" height="667"/>
+    </resources>
 </document>
