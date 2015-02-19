@@ -121,16 +121,14 @@
 	self.closeButton.center = center;
 	
 	// Load floating buttons above close button
-	CGFloat centerX = center.x;
-	CGFloat centerY = center.y - self.closeButton.bounds.size.height - self.buttonPadding;
-	for (UIButton* button in self.buttonItems) {
+	[self.buttonItems enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 		
+		UIButton* button = (UIButton*)obj;
 		[button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-		button.center = CGPointMake(centerX, centerY);
+		CGFloat centerY = center.y - (idx + 1) * (self.closeButton.bounds.size.height + self.buttonPadding);
+		button.center = CGPointMake(center.x, centerY);
 		[self.view addSubview:button];
-		
-		centerY = button.center.y - button.bounds.size.height - self.buttonPadding;
-	}
+	}];
 }
 
 
