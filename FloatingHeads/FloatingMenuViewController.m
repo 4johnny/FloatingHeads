@@ -50,7 +50,7 @@
 	
 	// Config close button
 	self.closeButton = [[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50) andUIImage:[UIImage imageNamed:@"icon-close"] andBackgroundColor:[UIColor flatRedColor]];
-	[self.closeButton addTarget:self action:@selector(closeButton) forControlEvents:UIControlEventTouchUpInside];
+	[self.closeButton addTarget:self action:@selector(closePressed:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:self.closeButton];
 }
 
