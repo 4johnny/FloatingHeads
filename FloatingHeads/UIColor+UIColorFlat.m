@@ -9,7 +9,17 @@
 #import "UIColor+UIColorFlat.h"
 
 
+#
+# pragma mark - Implementation
+#
+
+
 @implementation UIColor (UIColorFlat)
+
+
+#
+# pragma mark Class Values
+#
 
 
 + (UIColor*)flatWhiteColor {
@@ -35,6 +45,11 @@
 
 	return [UIColor colorWithRed:0.9115 green:0.2994 blue:0.2335 alpha:1.0];
 }
+
+
+#
+# pragma mark Methods
+#
 
 
 - (UIImage*)pixelImageWithAlpha:(CGFloat)alpha {

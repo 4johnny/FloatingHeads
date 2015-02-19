@@ -11,7 +11,15 @@
 #import "FloatingMenuViewController.h"
 
 
+#
+# pragma mark - Interface
+#
+
 @interface ViewController : UIViewController <FloatingMenuViewControllerDelegate>
+
+#
+# pragma mark Properties
+#
 
 @property (weak, nonatomic) IBOutlet FloatingButton *addButton;
 

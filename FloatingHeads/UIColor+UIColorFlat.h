@@ -8,12 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+#
+# pragma mark - Interface
+#
+
 @interface UIColor (UIColorFlat)
+
+#
+# pragma mark Class Values
+#
 
 + (UIColor*)flatWhiteColor;
 + (UIColor*)flatBlackColor;
 + (UIColor*)flatBlueColor;
 + (UIColor*)flatRedColor;
+
+#
+# pragma mark Methods
+#
 
 - (UIImage*)pixelImageWithAlpha:(CGFloat)alpha;
 - (UIImage*)pixelImage;

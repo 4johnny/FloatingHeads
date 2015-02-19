@@ -10,7 +10,17 @@
 #import "UIColor+UIColorFlat.h"
 
 
+#
+# pragma mark - Implementation
+#
+
+
 @implementation FloatingButton
+
+
+#
+# pragma mark Initializers
+#
 
 
 - (instancetype)initWithFrame:(CGRect)frame andUIImage:(UIImage*)image andBackgroundColor:(UIColor*)backgroundColor {
@@ -34,12 +44,34 @@
 }
 
 
+#
+# pragma mark NSObject(UINibLoadingAdditions)
+#
+
 - (void)awakeFromNib {
 	[super awakeFromNib];
 	
 	self.backgroundColor = [UIColor flatBlueColor]; // NOTE: We choose default to be blue
 	[self setup];
 }
+
+
+#
+# pragma mark UIView
+#
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+
+#
+# pragma mark Helpers
+#
 
 
 - (void)setup {
@@ -50,13 +82,5 @@
 	[self setBackgroundImage:[self.backgroundColor pixelImageWithAlpha:0.7] forState:UIControlStateHighlighted];
 }
 
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

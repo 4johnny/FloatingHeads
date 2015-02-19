@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#
+# pragma mark - Interface
+#
 
 @interface FloatingButton : UIButton
+
+#
+# pragma mark Initializers
+#
 
 - (instancetype)initWithFrame:(CGRect)frame andUIImage:(UIImage*)image andBackgroundColor:(UIColor*)backgroundColor;
 - (instancetype)init;

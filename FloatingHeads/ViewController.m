@@ -8,6 +8,12 @@
 
 #import "ViewController.h"
 #import "FloatingMenuViewController.h"
+#import "UIColor+UIColorFlat.h"
+
+
+#
+# pragma mark - Interface
+#
 
 
 @interface ViewController ()
@@ -15,7 +21,17 @@
 @end
 
 
+#
+# pragma mark - Implementation
+#
+
+
 @implementation ViewController
+
+
+#
+# pragma mark UIViewController
+#
 
 
 - (void)viewDidLoad {
@@ -34,8 +50,17 @@
 # pragma mark <FloatingMenuViewControllerDelegate>
 #
 
-- (void)cancelPressed {
 
+- (void)closePressed {
+
+	NSLog(@"Floating close button pressed");
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)buttonPressed:(UIButton*)button {
+	
+	NSLog(@"Floating button pressed: %@", button);
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -44,17 +69,38 @@
 # pragma mark Action Handlers
 #
 
+
 - (IBAction)addPressed:(FloatingButton *)sender {
 
-	FloatingMenuViewController* floatingMenuViewController = [[FloatingMenuViewController alloc] initWithView:self.view];
+	FloatingMenuViewController* floatingMenuViewController = [[FloatingMenuViewController alloc] initWithView:self.addButton];
 	floatingMenuViewController.delegate = self;
+	floatingMenuViewController.buttonItems = [self getFloatingButtons];
+	floatingMenuViewController.buttonPadding = 20;
+	
 	[self presentViewController:floatingMenuViewController animated:YES completion:nil];
 }
 
 
-- (CGPoint)getCancelButtonCenter {
+#
+# pragma mark Helpers
+#
 
-	return self.addButton.center;
+
+- (NSMutableArray*)getFloatingButtons {
+
+	NSMutableArray* floatingButtons = [NSMutableArray array];
+	
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50) andUIImage:[UIImage imageNamed:@"icon-add"] andBackgroundColor:[UIColor flatBlueColor]]];
+	
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50) andUIImage:[UIImage imageNamed:@"model-008"] andBackgroundColor:[UIColor flatWhiteColor]]];
+	
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50) andUIImage:[UIImage imageNamed:@"model-007"] andBackgroundColor:[UIColor flatWhiteColor]]];
+	
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50) andUIImage:[UIImage imageNamed:@"model-004"] andBackgroundColor:[UIColor flatWhiteColor]]];
+	
+	[floatingButtons addObject:[[FloatingButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50) andUIImage:[UIImage imageNamed:@"model-005"] andBackgroundColor:[UIColor flatWhiteColor]]];\
+	
+	return floatingButtons;
 }
 
 
