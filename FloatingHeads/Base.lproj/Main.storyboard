@@ -29,6 +29,9 @@
                                 <state key="normal" image="icon-add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ji-K5-rb4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -43,6 +46,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yOG-3t-twC" secondAttribute="bottom" constant="20" id="tYI-1v-amX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="yOG-3t-twC" id="mn5-YA-cFu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

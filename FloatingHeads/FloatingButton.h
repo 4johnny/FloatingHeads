@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface FloatingButton : UIButton
+
+- (instancetype)initWithFrame:(CGRect)frame andUIImage:(UIImage*)image andBackgroundColor:(UIColor*)backgroundColor;
+- (instancetype)init;
 
 @end

@@ -7,21 +7,35 @@
 //
 
 #import "ViewController.h"
+#import "FloatingMenuViewController.h"
+
 
 @interface ViewController ()
 
 @end
 
+
 @implementation ViewController
+
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)addPressed:(FloatingButton *)sender {
+
+	FloatingMenuViewController* floatingMenuViewController = [[FloatingMenuViewController alloc] initWithView:self.view];
+	
+	[self presentViewController:floatingMenuViewController animated:YES completion:nil];
+}
+
 
 @end
