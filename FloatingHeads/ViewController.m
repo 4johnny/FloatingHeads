@@ -30,6 +30,20 @@
 }
 
 
+#
+# pragma mark <FloatingMenuViewControllerDelegate>
+#
+
+- (void)cancelPressed {
+
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#
+# pragma mark Action Handlers
+#
+
 - (IBAction)addPressed:(FloatingButton *)sender {
 
 	FloatingMenuViewController* floatingMenuViewController = [[FloatingMenuViewController alloc] initWithView:self.view];

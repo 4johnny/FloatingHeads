@@ -13,6 +13,7 @@
 @protocol FloatingMenuViewControllerDelegate <NSObject>
 
 - (CGPoint)getCancelButtonCenter;
+- (void)cancelPressed;
 
 @end
 

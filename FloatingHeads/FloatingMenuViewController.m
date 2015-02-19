@@ -78,8 +78,8 @@
 
 
 - (IBAction)closePressed:(FloatingButton *)sender {
-	
-	
+
+	[self.delegate cancelPressed];
 }
 
 
