@@ -15,7 +15,7 @@
 #
 
 
-# define BUTTON_ANIMATE_TIME		0.25 // seconds
+# define BUTTON_ANIMATE_TIME		0.3 // seconds
 # define BUTTON_ANIMATE_ALPHA		0.7
 # define BUTTON_ANIMATE_ROTATION	-M_PI_2 // radians
 
